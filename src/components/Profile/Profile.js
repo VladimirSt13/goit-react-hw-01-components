@@ -1,30 +1,41 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileWrapper,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
-const Profile = props => {
+export const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
-      <ul class="stats">
+    <ProfileWrapper>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <Stats>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <Label>Views</Label>
+          <span>{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <Label>Likes</Label>
+          <span>{stats.likes}</span>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </ProfileWrapper>
   );
 };
 
@@ -33,11 +44,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
+  stats: PropTypes.exact({
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
   }),
 };
-
-export default Profile;

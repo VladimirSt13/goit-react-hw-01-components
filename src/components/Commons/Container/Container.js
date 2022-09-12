@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ContainerStyled } from './Container.styled';
 
-function Section({ title, children }) {
+export const Container = ({ title, children }) => {
   return (
-    <div>
+    <ContainerStyled>
       {title && <h2>{title}</h2>}
       {children}
-    </div>
+    </ContainerStyled>
   );
-}
+};
 
-Section.propTypes = {
+Container.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
 };
-
-export default Section;

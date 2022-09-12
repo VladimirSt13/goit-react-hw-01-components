@@ -1,20 +1,10 @@
-import Profile from './Profile/Profile';
-import Section from './Section';
+import { Profile } from './Profile/Profile';
+import { Container } from './Commons/Container/Container';
 import user from '../json/user.json';
 
-console.log('user', user);
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <Container title="React HW-01">
       <Profile
         username={user.username}
         tag={user.tag}
@@ -22,6 +12,6 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-    </div>
+    </Container>
   );
 };
