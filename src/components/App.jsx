@@ -1,10 +1,11 @@
 import { Profile } from './Profile/Profile';
-import { Container } from './Commons/Container/Container';
+import { Statistics } from './Statistics/Statistics';
 import user from '../json/user.json';
+import data from '../json/data.json';
 
 export const App = () => {
   return (
-    <Container title="React HW-01">
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -12,6 +13,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-    </Container>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+    </>
   );
 };
