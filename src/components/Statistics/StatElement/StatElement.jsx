@@ -4,7 +4,7 @@ import { Element, Label, Percentage } from './StatElement.styled';
 export const StatElement = props => {
   const { stat } = props;
   return (
-    <Element key={stat.id}>
+    <Element>
       <Label>{stat.label}</Label>
       <Percentage>{stat.percentage}</Percentage>
     </Element>

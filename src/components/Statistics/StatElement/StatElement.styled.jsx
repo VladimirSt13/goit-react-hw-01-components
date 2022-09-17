@@ -2,9 +2,12 @@ import styled from '@emotion/styled';
 import getRandomHexColor from '../../Utils/getRandomColor';
 
 export const Element = styled.li`
-  flex-grow: 1;
+  width: 90px;
   padding: ${p => `${p.theme.space[4]}px 0`};
   background-color: ${color => getRandomHexColor()};
+  &:not(:last-child) {
+    border-right: ${p => `${p.theme.borders.normal} ${p.theme.colors.grey}`};
+  }
 `;
 
 export const Label = styled.span`

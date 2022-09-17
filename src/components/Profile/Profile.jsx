@@ -14,7 +14,7 @@ export const Profile = props => {
       border="normal"
       borderColor="grey"
       borderRadius="normal"
-      boxShadow="0px 1px 3px #2b2b2b71"
+      boxShadow="normal"
     >
       <Box p={5} display="flex" alignItems="center" flexDirection="column">
         <Avatar src={avatar} alt="User avatar" />

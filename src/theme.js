@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     black: '#000000',
     grey: '#999999',
+    lightgrey: '#ebebeb',
     white: '#ffffff',
     text: '#2a2a2a',
     background: '#fff',
@@ -9,6 +10,8 @@ export const theme = {
     secondary: '#05a',
     accent: '#609',
     muted: '#f6f6f6',
+    red: '#f03f3f',
+    green: '#13dd2e',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -40,5 +43,9 @@ export const theme = {
     none: '0',
     normal: '4px',
     round: '50%',
+  },
+  shadows: {
+    none: 'none',
+    normal: '0px 2px 3px #2b2b2b71',
   },
 };
