@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Box } from '../Commons/Box';
 import { Avatar, Name, Tag, Location, Stats } from './Profile.styled';
-import { StatElement } from './StatElement/StatElement';
+import { ProfileElement } from './ProfileElement/ProfileElement';
 
 export const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
@@ -24,9 +24,9 @@ export const Profile = props => {
       </Box>
 
       <Stats>
-        <StatElement name="Followers" stats={stats} />
-        <StatElement name="Views" stats={stats} />
-        <StatElement name="Likes" stats={stats} />
+        <ProfileElement name="Followers" stats={stats} />
+        <ProfileElement name="Views" stats={stats} />
+        <ProfileElement name="Likes" stats={stats} />
       </Stats>
     </Box>
   );

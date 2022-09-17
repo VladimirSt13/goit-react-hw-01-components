@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Element, Label, Quantity } from './StatElement.styled';
+import { Element, Label, Quantity } from './ProfileElement.styled';
 
-export const StatElement = props => {
+export const ProfileElement = props => {
   const { name, stats } = props;
   return (
     <Element>
@@ -11,7 +11,7 @@ export const StatElement = props => {
   );
 };
 
-StatElement.prototype = {
+ProfileElement.prototype = {
   name: PropTypes.string.isRequired,
   stats: PropTypes.exact({
     followers: PropTypes.number.isRequired,

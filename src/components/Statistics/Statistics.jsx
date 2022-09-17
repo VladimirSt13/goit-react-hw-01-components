@@ -1,20 +1,29 @@
 // import PropTypes from 'prop-types';
-// import { Box } from '../Commons/Box';
+import { Box } from '../Commons/Box';
+import { Title } from './Title/Title';
+import { StatElement } from './StatElement/StatElement';
+import { Stats } from './Statistic.styled';
 
 export const Statistics = props => {
   const { title, stats } = props;
-
   return (
-    <section>
-      {title && <h2>{title}</h2>}
-      <ul>
+    <Box
+      m={3}
+      bg="white"
+      width="400px"
+      overflow="hidden"
+      border="normal"
+      borderColor="grey"
+      borderRadius="normal"
+      boxShadow="0px 1px 3px #2b2b2b71"
+      as="section"
+    >
+      {title && <Title title={title} />}
+      <Stats>
         {stats.map(stat => (
-          <li key={stat.id}>
-            <span>{stat.label}</span>
-            <span>{stat.percentage}</span>
-          </li>
+          <StatElement stat={stat} />
         ))}
-      </ul>
-    </section>
+      </Stats>
+    </Box>
   );
 };
