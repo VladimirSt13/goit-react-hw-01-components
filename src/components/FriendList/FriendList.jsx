@@ -6,7 +6,7 @@ export const FriendsList = props => {
   const { friends } = props;
 
   return (
-    <Box m={3} width="300px" as="ul">
+    <Box my={3} width="300px" as="ul">
       {friends.map(({ avatar, name, isOnline, id }) => (
         <FriendItem key={id}>
           <Status isOnline={isOnline}></Status>

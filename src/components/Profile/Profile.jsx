@@ -7,7 +7,7 @@ export const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
   return (
     <Box
-      m={3}
+      my={3}
       bg="white"
       width="320px"
       overflow="hidden"
@@ -17,7 +17,7 @@ export const Profile = props => {
       boxShadow="normal"
     >
       <Box p={5} display="flex" alignItems="center" flexDirection="column">
-        <Avatar src={avatar} alt="User avatar" />
+        <Avatar src={avatar} alt={username} />
         <Name>{username}</Name>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>

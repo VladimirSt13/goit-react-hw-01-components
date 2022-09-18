@@ -5,7 +5,7 @@ export const ProfileElement = props => {
   const { name, stats } = props;
   return (
     <Element>
-      <Label> {name}</Label>
+      <Label>{name}</Label>
       <Quantity>{stats[name.toLowerCase()]}</Quantity>
     </Element>
   );
