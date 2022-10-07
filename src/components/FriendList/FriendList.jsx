@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box } from '../Commons/Box';
-import { FriendItem, Status, Avatar, Name } from './FriendList.styled';
+import { FriendsListItem } from './FriendsListItem/FriendsListItem';
 
 export const FriendsList = props => {
   const { friends } = props;
@@ -8,11 +8,12 @@ export const FriendsList = props => {
   return (
     <Box my={3} width="300px" as="ul">
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <FriendItem key={id}>
-          <Status isOnline={isOnline}></Status>
-          <Avatar src={avatar} alt={name} width="48" />
-          <Name>{name}</Name>
-        </FriendItem>
+        <FriendsListItem
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
+        />
       ))}
     </Box>
   );
