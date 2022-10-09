@@ -25,7 +25,7 @@ export const TransactionHistory = props => {
   );
 };
 
-TransactionHistory.prototype = {
+TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,

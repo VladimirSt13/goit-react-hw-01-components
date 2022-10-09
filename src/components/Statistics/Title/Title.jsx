@@ -6,6 +6,6 @@ export const Title = props => {
   return <TitleStyled>{title}</TitleStyled>;
 };
 
-Title.prototype = {
+Title.propTypes = {
   title: PropTypes.string.isRequired,
 };

@@ -11,7 +11,7 @@ export const StatElement = props => {
   );
 };
 
-StatElement.prototype = {
+StatElement.propTypes = {
   stat: PropTypes.exact({
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,

@@ -13,7 +13,7 @@ export const Item = props => {
   );
 };
 
-Item.prototype = {
+Item.propTypes = {
   item: PropTypes.exact({
     type: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,

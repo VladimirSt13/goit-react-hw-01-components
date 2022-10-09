@@ -11,7 +11,7 @@ export const ProfileElement = props => {
   );
 };
 
-ProfileElement.prototype = {
+ProfileElement.propTypes = {
   name: PropTypes.string.isRequired,
   stats: PropTypes.exact({
     followers: PropTypes.number.isRequired,

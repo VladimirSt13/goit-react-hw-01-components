@@ -19,7 +19,7 @@ export const FriendsList = props => {
   );
 };
 
-FriendsList.prototype = {
+FriendsList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.exact({
       avatar: PropTypes.string.isRequired,

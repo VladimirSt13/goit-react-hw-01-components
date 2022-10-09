@@ -28,7 +28,7 @@ export const Statistics = props => {
   );
 };
 
-Statistics.prototype = {
+Statistics.propTypes = {
   title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
